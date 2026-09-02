@@ -1,3 +1,3 @@
 # Team Directory
 
-Project status: Main branch version
+Project status: Main branch updated version
