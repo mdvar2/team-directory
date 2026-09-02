@@ -7,3 +7,5 @@ Project status: Main and feature changes merged successfully
 Run the Team Directory from the command line using:
 
 python main.py
+
+Repository maintained through Git and GitHub.
