@@ -86,3 +86,11 @@ I developed the team member search feature on the `feature/search-member` branch
 
 I created a real merge conflict by changing the same project status line in `README.md` differently on `main` and `conflict/readme-status`. Git could not decide which version to keep, so it marked the file as conflicted. I resolved it by removing the conflict markers and replacing the two competing versions with one final status line that represented the merged result. After checking the file, I staged `README.md` to mark the conflict as resolved.
 
+## Merge vs rebase history
+
+The intentional README conflict produced a merge-shaped history because both branches had separate commits before they were combined with a merge commit. This preserves the point where the branches diverged and came back together.
+
+For the member-count feature, I rebased the branch onto the latest `main` before merging it. Rebase moved the feature commit on top of the newer main commit and gave it a new commit hash. This created a straight-line history and allowed the final merge into `main` to be fast-forwarded.
+
+I would use a merge when preserving the history of separate branches is useful, especially when work from different branches needs to remain visible. I would use rebase for my own feature work when I want to update it with the latest `main` and keep the final history linear.
+
