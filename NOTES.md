@@ -82,3 +82,7 @@ Before staging the next change to `main.py`, I ran `git diff` again. It showed t
 
 I developed the team member search feature on the `feature/search-member` branch using two separate commits. When I merged the branch into `main`, Git performed a fast-forward merge. I knew it was a fast-forward because Git displayed `Fast-forward` in the merge output, and `main` had not received any separate commits since the feature branch was created.
 
+## Merge conflict resolution
+
+I created a real merge conflict by changing the same project status line in `README.md` differently on `main` and `conflict/readme-status`. Git could not decide which version to keep, so it marked the file as conflicted. I resolved it by removing the conflict markers and replacing the two competing versions with one final status line that represented the merged result. After checking the file, I staged `README.md` to mark the conflict as resolved.
+
