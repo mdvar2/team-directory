@@ -94,3 +94,7 @@ For the member-count feature, I rebased the branch onto the latest `main` before
 
 I would use a merge when preserving the history of separate branches is useful, especially when work from different branches needs to remain visible. I would use rebase for my own feature work when I want to update it with the latest `main` and keep the final history linear.
 
+## Rejected push and recovery
+
+I created a commit directly on GitHub and then made a different local commit without pulling the remote change first. When I tried to push, Git rejected the push with a `fetch first` message because the remote branch contained work that my local branch did not have. I recovered by running `git pull --rebase origin main`, which replayed my local commit on top of the newer remote commit. I used rebase instead of force-push because force-pushing could overwrite work that already existed on GitHub.
+
