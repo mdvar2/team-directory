@@ -68,3 +68,9 @@ This focuses on where the change was made instead of explaining why it was
 made. A better message would be:
 `Clarify merge and rebase decision in project notes`
 
+## Part 3 - Diff observations
+
+### Diff observation 1
+
+Before staging the change to `main.py`, I ran `git diff`. It showed that I had added the JSON import and the code that opens and reads `team.json`. This helped me see exactly what had changed before I staged the file.
+
