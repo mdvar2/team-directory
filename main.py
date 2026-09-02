@@ -9,3 +9,7 @@ for member in team_members:
     print(f'{member["name"]} - {member["role"]}')
 
 search_name = input("Enter a name to search: ")
+
+for member in team_members:
+    if member["name"].lower() == search_name.lower():
+        print(f'Found: {member["name"]} - {member["role"]}')
