@@ -74,3 +74,7 @@ made. A better message would be:
 
 Before staging the change to `main.py`, I ran `git diff`. It showed that I had added the JSON import and the code that opens and reads `team.json`. This helped me see exactly what had changed before I staged the file.
 
+### Diff observation 2
+
+Before staging the next change to `main.py`, I ran `git diff` again. It showed the new loop that goes through the team member data and displays each member's name and role. This helped me confirm that only the display behaviour had changed before I staged it.
+
