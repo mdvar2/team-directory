@@ -78,3 +78,7 @@ Before staging the change to `main.py`, I ran `git diff`. It showed that I had a
 
 Before staging the next change to `main.py`, I ran `git diff` again. It showed the new loop that goes through the team member data and displays each member's name and role. This helped me confirm that only the display behaviour had changed before I staged it.
 
+## Feature branch merge
+
+I developed the team member search feature on the `feature/search-member` branch using two separate commits. When I merged the branch into `main`, Git performed a fast-forward merge. I knew it was a fast-forward because Git displayed `Fast-forward` in the merge output, and `main` had not received any separate commits since the feature branch was created.
+
