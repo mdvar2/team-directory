@@ -5,6 +5,8 @@ print("=== Team Directory ===")
 with open("team.json", "r") as file:
     team_members = json.load(file)
 
+print(f'Total team members: {len(team_members)}')
+
 for member in team_members:
     print(f'{member["name"]} - {member["role"]}')
 
