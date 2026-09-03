@@ -136,4 +136,28 @@ One situation where I would deliberately use `git fetch` instead of immediately 
 
 This would let me see exactly what changed on the remote before those changes are integrated into my local branch. In this assignment I would specifically check that my partner's merged contribution appears on `origin/main` while my local `main` still points to its previous commit. After confirming the difference, I could pull the changes into my local branch.
 
+## Assignment 1.2 Reflection
+
+### What I contributed
+
+I contributed an alphabetical sorting feature to my partner's (Kamogelo) Team Directory project. I added an option that allows the user to choose whether team members should be displayed alphabetically. I split the work into two commits so that adding the user option and implementing the sorting behaviour were separate changes.
+
+### Review feedback I received
+
+I opened a pull request from my fork into my partner's repository and requested a review. At the time of completing my submission, I was still waiting for my partner to complete the review, so I did not make up review feedback or changes that had not actually happened.
+
+### A review comment I gave
+
+While reviewing a contribution to my repository, I noticed that the role search did not initially handle empty input or leading and trailing spaces properly. I treated this as blocking because valid input with accidental spaces could fail to match the stored role. During the re-review I also found that an unsuccessful search could display the not-found message twice. The contributor corrected the issues using follow-up commits before I approved and merged the pull request.
+
+I also gave an optional suggestion to normalise the role search value once before the loop. I marked this as optional because the existing approach could still work and therefore did not need to block the merge.
+
+### Fetch vs pull in practice
+
+After the partner contribution was merged on GitHub, I deliberately used `git fetch origin` before pulling. My local `main` remained at its existing commit while `origin/main` moved forward to include the merged contribution. Running `git log --oneline main..origin/main` allowed me to inspect the commits that existed remotely but had not yet been integrated locally.
+
+Git then reported that my branch was five commits behind `origin/main`. Only after inspecting those changes did I run `git pull`. The pull fast-forwarded my local branch, and I verified in the Git log that commits authored by the contributor were now part of my local history. This showed me that `fetch` lets me inspect remote changes first, while `pull` retrieves and integrates them into the current branch.
+
+
+
 
