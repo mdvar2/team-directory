@@ -140,24 +140,18 @@ This would let me see exactly what changed on the remote before those changes ar
 
 ### What I contributed
 
-I contributed an alphabetical sorting feature to my Thato's Team Directory project. I added an option that allows the user to choose whether team members should be displayed alphabetically. I split the work into two commits so that adding the user option and implementing the sorting behaviour were separate changes.
+I contributed a team summary feature to Kamogelo's Team Directory project. The feature displays the total number of team members and also shows how many members belong to each role. I developed the feature in separate logical commits. The first commit added the total member count, and the second added role counts.
 
 ### Review feedback I received
 
-I opened a pull request from my fork into my partner's repository and requested a review. At the time of completing my submission, I was still waiting for my partner to complete the review, so I did not make up review feedback or changes that had not actually happened.
+Kamogelo reviewed my pull request and requested that I document the new team summary feature in NOTES.md before merging. I addressed the feedback in a follow-up commit instead of amending my earlier commits. After I pushed the change, I replied to the review comment and Kamogelo re-reviewed and approved the pull request. He also gave an optional suggestion to sort the roles alphabetically. I acknowledged the suggestion but kept it as a possible future improvement because it was not required for the current feature.
 
 ### A review comment I gave
 
-While reviewing a contribution to my repository, I noticed that the role search did not initially handle empty input or leading and trailing spaces properly. I treated this as blocking because valid input with accidental spaces could fail to match the stored role. During the re-review I also found that an unsuccessful search could display the not-found message twice. The contributor corrected the issues using follow-up commits before I approved and merged the pull request.
-
-I also gave an optional suggestion to normalise the role search value once before the loop. I marked this as optional because the existing approach could still work and therefore did not need to block the merge.
+While reviewing Kamogelo's contribution to my repository, I noticed that the role search did not initially handle empty input or leading and trailing spaces properly. I treated this as blocking because valid input with accidental spaces could fail to match the stored role.
+During the re-review I also found that an unsuccessful search could display the not-found message twice. Kamogelo corrected these issues using follow-up commits before I approved and merged the pull request. I also gave an optional suggestion to normalise the role search value once before the loop.
 
 ### Fetch vs pull in practice
 
-After the partner contribution was merged on GitHub, I deliberately used `git fetch origin` before pulling. My local `main` remained at its existing commit while `origin/main` moved forward to include the merged contribution. Running `git log --oneline main..origin/main` allowed me to inspect the commits that existed remotely but had not yet been integrated locally.
-
-Git then reported that my branch was five commits behind `origin/main`. Only after inspecting those changes did I run `git pull`. The pull fast-forwarded my local branch, and I verified in the Git log that commits authored by the contributor were now part of my local history. This showed me that `fetch` lets me inspect remote changes first, while `pull` retrieves and integrates them into the current branch.
-
-
-
+After Kamogelo's contribution was merged into my repository, I used `git fetch origin` before pulling. My local `main` remained on its previous commit while `origin/main` moved forward. Running `git log --oneline main..origin/main` showed the commits that existed remotely but had not yet been integrated locally. Git reported that my branch was five commits behind. I then used `git pull`, which fast-forwarded my local branch. I verified that commits authored by Kamogelo were now present in my local history. This showed me that `fetch` retrieves and lets me inspect remote changes, while `pull` retrieves and integrates them.
 
