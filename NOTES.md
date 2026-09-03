@@ -100,7 +100,7 @@ The commits I found most useful were the ones that each represented one complete
 
 The rejected push showed me that a failed push can be Git protecting shared history rather than something being wrong with the repository. Pulling with rebase allowed me to keep the remote change and replay my local commit on top of it without overwriting the work already on GitHub. One thing that surprised me was how clearly the commit graph shows the difference between workflows. The merge produced a visible diamond, while the rebased feature became a straight line even though both approaches ultimately brought the changes into main.
 
-# Assignment 1.2
+## Assignment 1.2
 
 ## Question 1 - Why fork instead of branch?
 
