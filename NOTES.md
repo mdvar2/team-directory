@@ -100,3 +100,40 @@ The commits I found most useful were the ones that each represented one complete
 
 The rejected push showed me that a failed push can be Git protecting shared history rather than something being wrong with the repository. Pulling with rebase allowed me to keep the remote change and replay my local commit on top of it without overwriting the work already on GitHub. One thing that surprised me was how clearly the commit graph shows the difference between workflows. The merge produced a visible diamond, while the rebased feature became a straight line even though both approaches ultimately brought the changes into main.
 
+# Assignment 1.2
+
+## Question 1 - Why fork instead of branch?
+
+In Assignment 1.1 I could create branches directly inside my own repository because I owned the repository and had permission to push changes to it. In this assignment I will be contributing to another person's repository, so I should not assume that I have permission to create and push branches directly to their project.
+
+Forking gives me my own copy of their repository on GitHub where I can safely create branches and push my work. I can then open a pull request from my fork back into the original repository. If I only cloned my partner's repository and tried to push a branch directly to it without write permission, GitHub would reject the push.
+
+## Question 2 - PR description: bad vs. good
+
+### Bad PR description
+
+Added role search.
+
+### Better PR description
+
+**What:** Added the ability to search team members by their role.
+
+**Why:** This makes it easier to find people with a particular responsibility without manually reading through every team member.
+
+**How to verify:** Run the Team Directory, choose the role search option, and enter an existing role. Confirm that matching team members are displayed. Also try a role that does not exist and confirm that the program handles it correctly.
+
+The second description is easier to review because it explains what changed, why the change is useful, and gives the reviewer clear steps they can follow to test the feature.
+
+## Question 3 - Triaging review comments
+
+A blocking comment identifies something that should be corrected before the pull request is merged, such as a bug, incorrect behaviour, or a missing case that could cause the feature to fail. A nit or suggestion is an optional improvement, such as naming, formatting, or another small change that would improve the code but should not necessarily prevent the merge. A question asks for clarification about the code or the reason behind a particular decision.
+
+If a reviewer does not label the comment, I will consider whether leaving the issue unchanged could make the feature incorrect, unreliable, or difficult to use. If it could, I will treat it as blocking. If the code still works correctly and the comment is mainly about preference or a small improvement, I will treat it as a suggestion. If the reviewer is asking me to explain something rather than requesting a change, I will treat it as a question.
+
+## Question 4 - When fetch beats pull
+
+One situation where I would deliberately use `git fetch` instead of immediately running `git pull` is after my partner's contribution has been merged into my GitHub repository. I would fetch the remote changes first and compare my local `main` with `origin/main`.
+
+This would let me see exactly what changed on the remote before those changes are integrated into my local branch. In this assignment I would specifically check that my partner's merged contribution appears on `origin/main` while my local `main` still points to its previous commit. After confirming the difference, I could pull the changes into my local branch.
+
+
