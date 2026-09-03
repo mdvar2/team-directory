@@ -16,14 +16,20 @@ for member in team_members:
     if member["name"].lower() == search_name.lower():
         print(f'Found: {member["name"]} - {member["role"]}')
 
-role_search = input("Enter a role to search: ")
+role_search = input("Enter a role to search: ").strip().lower()
 
-role_found = False
+if not role_search:
+    print("Please enter a role.")
+else:
+    role_found = False
 
-for member in team_members:
-    if member["role"].lower() == role_search.lower():
-        print(f'Found: {member["name"]} - {member["role"]}')
-        role_found = True
+    for member in team_members:
+        if member["role"].lower() == role_search:
+            print(f'Found: {member["name"]} - {member["role"]}')
+            role_found = True
+
+    if not role_found:
+        print("No team members found with that role.")
 
 if not role_found:
     print(f'No team members found with role: {role_search}')
