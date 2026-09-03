@@ -11,3 +11,5 @@ Run the Team Directory from the command line using:
 python main.py
 
 Repository maintained through Git and GitHub.
+
+CI pull request verification completed.
