@@ -24,12 +24,9 @@ else:
     role_found = False
 
     for member in team_members:
-        if member["role"].lower() == role_search:
+        if member["role"].lower() == role_search.lower():
             print(f'Found: {member["name"]} - {member["role"]}')
             role_found = True
-
-    if not role_found:
-        print("No team members found with that role.")
 
 if not role_found:
     print(f'No team members found with role: {role_search}')
