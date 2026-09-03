@@ -1,5 +1,7 @@
 # Team Directory
 
+[![Verify repository](https://github.com/mdvar2/team-directory/actions/workflows/verify.yml/badge.svg)](https://github.com/mdvar2/team-directory/actions/workflows/verify.yml)
+
 Project status: Main and feature changes merged successfully
 
 ## Usage
