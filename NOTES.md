@@ -140,7 +140,7 @@ This would let me see exactly what changed on the remote before those changes ar
 
 ### What I contributed
 
-I contributed an alphabetical sorting feature to my partner's (Kamogelo) Team Directory project. I added an option that allows the user to choose whether team members should be displayed alphabetically. I split the work into two commits so that adding the user option and implementing the sorting behaviour were separate changes.
+I contributed an alphabetical sorting feature to my Thato's Team Directory project. I added an option that allows the user to choose whether team members should be displayed alphabetically. I split the work into two commits so that adding the user option and implementing the sorting behaviour were separate changes.
 
 ### Review feedback I received
 
