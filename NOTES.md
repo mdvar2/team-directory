@@ -98,3 +98,9 @@ I would use a merge when preserving the history of separate branches is useful, 
 
 I created a commit directly on GitHub and then made a different local commit without pulling the remote change first. When I tried to push, Git rejected the push with a `fetch first` message because the remote branch contained work that my local branch did not have. I recovered by running `git pull --rebase origin main`, which replayed my local commit on top of the newer remote commit. I used rebase instead of force-push because force-pushing could overwrite work that already existed on GitHub.
 
+## Final reflection
+
+The commits I found most useful were the ones that each represented one complete behaviour, such as loading the team data, displaying members, and adding search. A change I could easily have bundled was the search input and the search logic, but keeping them separate made the feature work easier to understand. I used a merge for the intentional README conflict because I wanted the history to preserve the two separate lines of development and show where they came together. I used rebase for the member-count branch because it was my own feature work and replaying it onto the latest main kept the final history linear. 
+
+The rejected push showed me that a failed push can be Git protecting shared history rather than something being wrong with the repository. Pulling with rebase allowed me to keep the remote change and replay my local commit on top of it without overwriting the work already on GitHub. One thing that surprised me was how clearly the commit graph shows the difference between workflows. The merge produced a visible diamond, while the rebased feature became a straight line even though both approaches ultimately brought the changes into main.
+
